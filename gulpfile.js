@@ -36,7 +36,7 @@ gulp.task('css-libs', ['sass'], function() {
 				.pipe(rename({suffix: '.min'}))
 				.pipe(gulp.dest('app/css'));
 });
-	gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
+	gulp.task('default', ['browser-sync', 'css-libs', 'scripts'], function() {
 		gulp.watch('app/sass/**/**.sass', ['sass']);
 		gulp.watch('app/**/**.html', browserSync.reload);
 		gulp.watch('app/js/**/**.js', browserSync.reload);
